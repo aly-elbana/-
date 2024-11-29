@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/jpg" href="./Enhanced_Image_Bicubic.png">
+    <title>For Noureen basha</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(to bottom, #121212, #1f1f1f);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start; /* Align content at the top */
+        height: 100vh;
+        overflow-y: auto; /* Enable vertical scrolling */
+      }
+
+      .container {
+        text-align: center;
+        background: #292929;
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+        padding: 40px 20px 60px;
+        max-width: 90%;
+        position: relative;
+        overflow: hidden;
+        margin-top: 20px; /* Add some space on top */
+        max-height: 90vh; /* Limit the height of the container to 90% of the viewport */
+        overflow-y: auto; /* Allow scrolling within the container if content overflows */
+      }
+
+      .heart-bg {
+        position: absolute;
+        top: -50px;
+        left: -50px;
+        width: 150px;
+        height: 150px;
+        background: rgba(255, 91, 135, 0.3);
+        border-radius: 50%;
+        animation: float 6s ease-in-out infinite;
+      }
+
+      .heart-bg:nth-child(2) {
+        top: auto;
+        bottom: -50px;
+        right: -50px;
+        animation-delay: 3s;
+      }
+
+      @keyframes float {
+        0%, 100% {
+          transform: translateY(0) scale(1);
+        }
+        50% {
+          transform: translateY(-20px) scale(1.2);
+        }
+      }
+
+      h1 {
+        font-size: 2rem;
+        color: #ff5b87;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+      }
+      h3 {
+        font-size: 1.4rem;
+        color: #ff5b87;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+      }
+
+      p {
+        font-size: 1.2rem;
+        color: #ccc;
+        margin-bottom: 30px;
+        line-height: 1.6;
+      }
+
+      .buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .buttons a,
+      .buttons button {
+        text-decoration: none;
+        background: #ff5b87;
+        color: #fff;
+        padding: 12px 20px;
+        border-radius: 50px;
+        font-weight: bold;
+        font-size: 1rem;
+        transition: transform 0.3s ease, background 0.3s ease;
+        cursor: pointer;
+        border: none;
+      }
+
+      .buttons a:hover,
+      .buttons button:hover {
+        transform: scale(1.1);
+        background: #ff3e6f;
+      }
+
+      .stars {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background: url("https://www.transparenttextures.com/patterns/dark-matter.png");
+      }
+
+      .message-box {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #292929;
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+        text-align: center;
+        width: 80%;
+        max-height: 80vh; /* Limit the height of the message box */
+        overflow-y: auto; /* Add scrollbar if the content overflows */
+      }
+
+      .message-box h2 {
+        color: #ff5b87;
+        margin-bottom: 10px;
+      }
+
+      .message-box p {
+        color: #fff;
+        margin-bottom: 20px;
+      }
+
+      .message-box button {
+        margin-top: 20px;
+        background: #ff5b87;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 50px;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.3s ease, background 0.3s ease;
+      }
+
+      .message-box button:hover {
+        transform: scale(1.1);
+        background: #ff3e6f;
+      }
+
+      .kk {
+        align-items: center;
+        width: 50px;
+        position: relative;
+        top: 15px;
+      }
+
+      #f {
+        width: 95px;
+        position: relative;
+        top: 20px;
+      }
+
+      span {
+        color: #ff5b87;
+        display: block;
+        font-weight: bolder;
+        font-style: oblique;
+      }
+
+      #mo {
+        display: inline;
+        color: blueviolet;
+      }
+
+      p > .kk {
+        width: 50px;
+        position: relative;
+        top: 18px;
+      }
+
+      span#Lo {
+        color: violet;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          padding: 20px;
+        }
+
+        h1 {
+          font-size: 1.8rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+
+        .buttons a,
+        .buttons button {
+          font-size: 0.9rem;
+          padding: 10px 15px;
+        }
+
+        .kk {
+          width: 40px;
+        }
+
+        #f {
+          width: 80px;
+        }
+
+        .message-box {
+          padding: 20px;
+        }
+
+        .message-box button {
+          font-size: 0.9rem;
+          padding: 8px 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stars"></div>
+    <div class="container">
+      <div class="heart-bg"></div>
+      <div class="heart-bg"></div>
+      <h1>Made specially for Noureen 🫡</h1>
+      <p>
+        Just wanted to give you a quick <span id="mo"> Reminder </span> of how
+        <span>AMAZING , FUNNY , PRETTY</span> you are
+        <p>keep this spirit ya 3am wallahy and iam your num#1 supporter in such thing 🫡🫡🫡</p>
+        المهم بقا اختاري  الزراير اللي تحت بالترتيب
+      </p>
+      <div class="buttons">
+        <a href="./button1.html" target="_blank">🌟button 1🌟</a>
+        <a href="./button2.html" target="_blank">🌟button 2🌟</a>
+        <button onclick="showMessage()">🌟button 3🌟</button>
+      </div>
+      <p><img class="kk" id="kkk" src="Enhanced_Image_Bicubic.png"> لو مختارتيش ب الترتيب مش هيشتغل </p>
+    </div>
+
+    <div class="message-box" id="messageBox">
+      <h2>
+        <img class="kk" src="./Enhanced_Image_Bicubic.png" /> كفايه رخامه بقا
+      </h2>
+      <p>
+        <h3>First time saying this to anyone but </h3>
+        You are absolutely stunning from both the inside and out.
+        <p>Thanks for being such special and important person by only being </p> <span id="Lo">Yourself🫡🫡</span> <img id="f" src="./improved_image.png">
+        
+      </p>
+      
+      <button onclick="hideMessage()">Close</button>
+    </div>
+
+    <script>
+      function showMessage() {
+        document.getElementById("messageBox").style.display = "block";
+      }
+
+      function hideMessage() {
+        document.getElementById("messageBox").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
